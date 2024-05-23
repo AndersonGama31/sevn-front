@@ -1,10 +1,10 @@
-import * as Component from '@/components';
+import * as Component from '@/components'
 
 export default function HomePage() {
-    return (
-        <div>
-            <Component.Navbar />
-            <Component.Banner />
-        </div>
-    )   
-  }
+  return (
+    <div>
+      <Component.Navbar />
+      <Component.Banner />
+    </div>
+  )
+}

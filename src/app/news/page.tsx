@@ -4,5 +4,5 @@ export default function NewsPage() {
       <h1>SEVN NEWS</h1>
       <p>The latest news from around the world.</p>
     </div>
-  );
+  )
 }
