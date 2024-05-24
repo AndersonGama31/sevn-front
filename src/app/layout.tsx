@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import { IBM_Plex_Sans } from 'next/font/google'
+
+import * as Component from '@/components'
 import './globals.css'
 
 const inter = IBM_Plex_Sans({
@@ -19,7 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Component.Navbar />
+        {children}
+      </body>
     </html>
   )
 }

@@ -1,0 +1,21 @@
+.headline {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.headline h1 {
+    font-size: 58px;
+    font-weight: 700;
+    color: var(--text-black);
+    line-height: 60px;
+}
+
+.headline p {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    color: var(--text-red);
+    line-height: 15.6px;
+}

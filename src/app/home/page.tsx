@@ -1,10 +1,17 @@
 import * as Component from '@/components'
 
+import Styles from './home.module.css'
+
 export default function HomePage() {
   return (
-    <div>
-      <Component.Navbar />
+    <main className={Styles.main}>
       <Component.Banner />
-    </div>
+
+      <section>
+        <Component.Headline />
+        <Component.ImageNewsCard />
+        <Component.ImageNewsCard />
+      </section>
+    </main>
   )
 }

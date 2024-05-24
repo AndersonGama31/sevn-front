@@ -6,7 +6,6 @@
     align-items: center;
     background-color: var(--background-light-gray);
     border-radius: var(--radius);
-    margin: 0 50px;
 }
 
 .container h1 {
