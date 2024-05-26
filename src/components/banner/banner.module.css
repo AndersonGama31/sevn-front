@@ -4,6 +4,7 @@
     height: 190px;
     justify-content: center;
     align-items: center;
+    margin-top: 30px;
     background-color: var(--background-light-gray);
     border-radius: var(--radius);
 }
@@ -13,4 +14,26 @@
     font-weight: 700;
     color: var(--text-light-gray);
     line-height: 42.9px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        height: 150px;
+    }
+
+    .container h1 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        height: 120px;
+    }
+
+    .container h1 {
+        font-size: 24px;
+        line-height: 30px;
+    }
 }

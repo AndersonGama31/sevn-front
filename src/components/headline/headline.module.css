@@ -20,3 +20,53 @@
     color: var(--text-red);
     line-height: 15.6px;
 }
+
+
+
+@media (max-width: 1365px) {
+    .headline h1 {
+        font-size: 44px;
+        line-height: 46px;
+    }
+
+    .headline p {
+        font-size: 11px;
+        line-height: 14.3px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .headline h1 {
+        font-size: 42px;
+        line-height: 44px;
+    }
+
+    .headline p {
+        font-size: 11px;
+        line-height: 14.3px;
+    }
+}
+
+@media (max-width: 768px) {
+    .headline h1 {
+        font-size: 38px;
+        line-height: 40px;
+    }
+
+    .headline p {
+        font-size: 10px;
+        line-height: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .headline h1 {
+        font-size: 30px;
+        line-height: 32px;
+    }
+
+    .headline p {
+        font-size: 10px;
+        line-height: 10px;
+    }
+}
