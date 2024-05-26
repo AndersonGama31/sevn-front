@@ -10,4 +10,9 @@
     font-size: var(--text-small);
     font-weight: 700;
     line-height: 20px;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }

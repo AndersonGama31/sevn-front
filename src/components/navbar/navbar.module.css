@@ -13,3 +13,15 @@
     color: var(--text-black);
     line-height: 29.9px;
 }
+
+.container div {
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 54px;
+    height: 54px;
+    background-color: #000000;
+}

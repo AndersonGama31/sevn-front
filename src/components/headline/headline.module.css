@@ -11,7 +11,13 @@
     font-weight: 700;
     color: var(--text-black);
     line-height: 60px;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
+
 
 .headline p {
     text-transform: uppercase;
