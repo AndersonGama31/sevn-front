@@ -1,24 +1,35 @@
+'use client'
+
+import React from 'react'
+
 import * as Component from '@/components'
+import useFetch from '@/hooks/useFetch'
+import { INewsResponse } from '@/services/module/news/interface'
 
 import Styles from './news.module.css'
 
 export default function NewsPage({ params }: { params: { slug: string } }) {
+  const { data, isLoading, error } = useFetch<INewsResponse>(`/news/${params.slug}`)
+
   return (
     <main className={Styles.main}>
-      <section>
-        <Component.Headline />
+      {isLoading && <Component.Loading />}
 
-        <h2>
-          Nesta primeira fase do serviço são cerca de R$ 4 bilhões a serem devolvidos. Banco Central estima que os
-          clientes tenham a receber cerca de R$ 8 bilhões.
-        </h2>
-      </section>
+      {!isLoading && !error && data && (
+        <React.Fragment>
+          <section>
+            <Component.Headline {...data} />
 
-      <Component.Banner />
+            <h2>{data?.subtitle}</h2>
+          </section>
 
-      <section>
-        <Component.Content />
-      </section>
+          <Component.Banner />
+
+          <section>
+            <Component.Content {...data} />
+          </section>
+        </React.Fragment>
+      )}
     </main>
   )
 }

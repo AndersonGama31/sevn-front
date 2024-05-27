@@ -9,7 +9,6 @@ import Styles from './home.module.css'
 export default function HomePage() {
   const { data: main, isLoading, error } = useFetch<IListAllNewsResponse>('/news')
   const { data: dataSecondary } = useFetch<INewsResponse[]>('/news/secondary')
-  console.log('dataSecondary', dataSecondary)
 
   return (
     <main className={Styles.main}>
