@@ -1,6 +1,6 @@
 export interface IListAllNewsResponse {
     headline: INewsResponse;
-    ilustrated_news: INewsResponse[];
+    illustrated_news: INewsResponse[];
 }
 
 export interface INewsResponse {
