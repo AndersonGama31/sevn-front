@@ -2,12 +2,14 @@
 
 import * as Component from '@/components'
 import useFetch from '@/hooks/useFetch'
-import { IListAllNewsResponse } from '@/services/module/news/interface'
+import { IListAllNewsResponse, INewsResponse } from '@/services/module/news/interface'
 
 import Styles from './home.module.css'
 
 export default function HomePage() {
   const { data: main, isLoading, error } = useFetch<IListAllNewsResponse>('/news')
+  const { data: dataSecondary } = useFetch<INewsResponse[]>('/news/secondary')
+  console.log('dataSecondary', dataSecondary)
 
   return (
     <main className={Styles.main}>
@@ -28,14 +30,9 @@ export default function HomePage() {
       )}
 
       <section className={Styles.secondaryNews}>
-        <Component.SecondaryNews />
-        <Component.SecondaryNews />
-        <Component.SecondaryNews />
-        <Component.SecondaryNews />
-        <Component.SecondaryNews />
-        <Component.SecondaryNews />
-        <Component.SecondaryNews />
-        <Component.SecondaryNews />
+        {dataSecondary?.map(news => {
+          return <Component.SecondaryNews key={news.id} {...news} />
+        })}
       </section>
     </main>
   )
