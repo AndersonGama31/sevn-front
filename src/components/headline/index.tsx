@@ -1,12 +1,15 @@
 import React from 'react'
 
+import { INewsResponse } from '@/services/module/news/interface'
+import * as utils from '@/utils'
+
 import Styles from './headline.module.css'
 
-export const Headline: React.FC = () => {
+export const Headline: React.FC<INewsResponse> = headline => {
   return (
     <div className={Styles.headline}>
-      <p>Economia</p>
-      <h1>Quem não tiver valores a receber nesta etapa poderá ter nas próximas fases, diz BC</h1>
+      <p>{utils.topicMapper[headline.topic]}</p>
+      <h1>{headline.title}</h1>
     </div>
   )
 }
