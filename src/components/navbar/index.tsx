@@ -12,7 +12,7 @@ export const Navbar: React.FC = () => {
   const pathname = usePathname()
   return (
     <nav className={styles.container}>
-      {pathname !== '/home' && (
+      {pathname.includes('/news') && (
         <div onClick={() => router.back()}>
           <ArrowLeft color="white" />
         </div>
